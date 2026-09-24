@@ -8,33 +8,28 @@
 </head>
 <body>
 
-  <header class="topbar">
-    <span class="prompt">krish@devops<span class="cursor">:~$</span></span>
-  </header>
-
   <main>
     <section class="intro">
-      <p class="eyebrow">whoami</p>
       <h1>Krish Patel</h1>
-      <p class="tagline">Learning to build, automate, and ship software reliably — one broken build at a time.</p>
+      <p class="tagline">Computer Science student learning DevOps through hands-on projects.</p>
     </section>
 
     <section class="about">
       <p>
-        I'm working through the fundamentals of DevOps: Linux administration, version control,
-        CI/CD pipelines, and containerization. This site is itself part of that — every time I push
-        a change to this repo, a pipeline builds and redeploys it automatically.
+        I'm currently working through The Ultimate DevOps Bootcamp and learning how Linux, Git,
+        Jenkins, and Docker work together. This website is one of my projects where I'm putting
+        those skills into practice and building a simple CI/CD workflow step by step.
       </p>
     </section>
 
     <section class="skills">
-      <p class="eyebrow">stack</p>
+      <p class="eyebrow">skills</p>
       <ul class="skill-list">
-        <li>Linux <span class="dim">(Ubuntu, CentOS/RHEL, Alpine)</span></li>
-        <li>Git &amp; GitHub</li>
-        <li>Jenkins <span class="dim">(pipelines, plugins)</span></li>
-        <li>Docker</li>
-        <li>Networking &amp; DNS fundamentals</li>
+        <li>Linux <span class="dim">(command line, services, permissions, SSH, package management)</span></li>
+        <li>Git &amp; GitHub <span class="dim">(repositories, commits, branches, merging, remotes)</span></li>
+        <li>Jenkins <span class="dim">(pipelines, Jenkinsfile, plugins, CI/CD basics)</span></li>
+        <li>Docker <span class="dim">(images, containers, docker run, port mapping, building images)</span></li>
+        <li>Networking <span class="dim">(IP addresses, TCP, ports, host-to-container mapping)</span></li>
       </ul>
     </section>
 
@@ -42,25 +37,27 @@
       <p class="eyebrow">projects</p>
 
       <article class="project">
-        <h2>This site</h2>
+        <h2>Portfolio site</h2>
         <p>
-          A static site with a fully automated deployment pipeline. Push to GitHub →
-          Jenkins builds it → packaged into Docker → redeployed. No manual steps.
+          I'm using this website as a hands-on DevOps project. The source code is on GitHub.
+          I'm building a Jenkins pipeline that will clone the repository, build a Docker image,
+          and run the website inside a Docker container.
         </p>
+        <p class="flow">GitHub → Jenkins → Docker build → Docker container</p>
         <div class="links">
-          <a href="#">source</a>
+          <a href="https://github.com/Krish2916/portfolio-site">source →</a>
         </div>
       </article>
 
       <article class="project placeholder">
-        <h2>Next up</h2>
-        <p>More projects landing here as I work through the rest of the course.</p>
+        <h2>What I'm learning next</h2>
+        <p>Currently working on Docker commands. Next: more Docker, then Kubernetes and cloud as I progress through the course.</p>
       </article>
     </section>
   </main>
 
   <footer>
-    <p>Built by Krish Patel. Deployed automatically — that's the point.</p>
+    <p>Built by Krish Patel.</p>
   </footer>
 
 </body>

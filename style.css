@@ -20,16 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.topbar {
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--text-dim);
-}
-
-.prompt .cursor { color: var(--accent); }
-
 main {
   max-width: 640px;
   margin: 0 auto;
@@ -38,11 +28,20 @@ main {
 
 section { margin-bottom: 3.5rem; }
 
+.intro { padding-top: 0.5rem; }
+
 .eyebrow {
   font-family: var(--mono);
   font-size: 0.8rem;
   color: var(--accent);
   margin: 0 0 0.6rem;
+}
+
+.flow {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0 0 0.8rem;
 }
 
 .eyebrow::before { content: "$ "; color: var(--text-dim); }

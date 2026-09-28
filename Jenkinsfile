@@ -1,9 +1,20 @@
 pipeline {
-    agent any 
+    agent any
+
+    triggers {
+        pollSCM('H/2 * * * *')
+    }
+
     stages {
-        stage('Check files') {
+        stage('Build image') {
             steps {
-                sh 'ls -la'
+                sh 'docker build -t portfolio-site .'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'docker rm -f portfolio || true'
+                sh 'docker run -d -p 367:80 --name portfolio portfolio-site'
             }
         }
     }

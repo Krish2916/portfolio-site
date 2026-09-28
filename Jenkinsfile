@@ -14,7 +14,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker rm -f portfolio || true'
-                sh 'docker run -d -p 367:80 --name portfolio portfolio-site'
+                sh 'docker run -d --restart unless-stopped -p 367:80 --name portfolio portfolio-site'
+            }
+        }
+        stage('Smoke test') {
+            steps {
+                sh 'sleep 3'
+                sh 'curl -fsS -o /dev/null http://host.docker.internal:367'
             }
         }
     }
